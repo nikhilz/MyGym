@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>MyGym</title>
+<meta charset="utf-8" />
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+</head>
+
+<body data-ng-app="app">
+
+<div data-ng-controller="AppController">
+	<div data-ng-hide="isSpecificPage()" data-ng-cloak="" class="no-print">
+                <section data-ng-include=" 'view/include/header.html'" id="header" class="top-header"></section>
+
+<!--                 <aside data-ng-include=" 'view/include/navbar.html'" id="nav-container"></aside> -->
+            </div>
+	<div class="view-container">
+                <section data-ng-view="" id="content" class="animate-fade-up"></section>
+    </div>
+</div>
+
+
+
+	
+<script src="js/controller.js"></script>
+
+
+
+</body>
+</html>

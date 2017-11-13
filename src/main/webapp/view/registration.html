@@ -1,0 +1,57 @@
+
+
+<style>
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
+</style>
+
+
+
+
+
+
+<div class="container" style="width: 41%" data-ng-controller="RegCtrl">
+
+	<form name="myForm">
+		<div class="form-group">
+			<label for="username">Name :<span class="error" ng-show="UsernameErr" style="color:red"> * Required</span></label> 
+			<input type="text"
+				class="form-control" id="username" placeholder="Enter Name"
+				name="username" data-ng-model="username" autocomplete="off">
+		</div>
+		<div class="form-group">
+			<label for="mobile">Mobile :<span class="error" ng-show="MobileErr" style="color:red"> * Required</span></label> 
+			<input type="number"
+				class="form-control" id="mobile" placeholder="Enter Mobile number"
+				name="mobile" data-ng-model="mobile" autocomplete="off">
+		</div>
+		<div class="form-group">
+			<label for="emailID">Email : <span class="error" ng-show="EmailErr" style="color:red"> * Required</span></label> 
+			<input type="email"
+				class="form-control" id="emailID" placeholder="Enter Email ID"
+				name="emailID" data-ng-model="emailID" autocomplete="off"> 
+			<span
+				class="error" ng-show=""> 
+				<font
+				color="red">Not valid format!</font>
+			</span><br>
+		</div>
+		<div class="form-group">
+			<label for="address">Address : <span class="error" ng-show="AddressErr" style="color:red"> * Required</span></label>
+			<textarea class="form-control" id="address"
+				placeholder="Enter address" name="address" data-ng-model="address"
+				autocomplete="off"></textarea>
+		</div>
+
+
+
+
+		<button type="submit" class="btn btn-success"
+			data-ng-click="submitDetails()" >Submit</button>
+		<span class="error">{{resp}}</span>
+	</form>
+
+</div>

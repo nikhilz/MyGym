@@ -1,0 +1,36 @@
+
+
+<style>
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+</style>
+
+<div>
+
+
+
+
+    <div class="container" style="width:41%" data-ng-controller="EnquiryCtrl">
+        
+        <form >
+            <div class="form-group">
+                <label for="username">Name :</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Name" name="username" data-ng-model="username"
+                    autocomplete="off" >
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile :</label>
+                <input type="number" class="form-control" id="mobile" placeholder="Enter Mobile number" name="mobile" data-ng-model="mobile"
+                    autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn-success" data-ng-click="submitDetails()">Submit</button>
+            <span class="error" >{{resp}}</span>
+        </form>
+    </div>
+
+
+
+</div>

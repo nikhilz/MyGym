@@ -1,0 +1,22 @@
+
+<div class="container" data-ng-controller="loginCtrl">
+	<h3 style="color: blue">MyGym Admin Portal</h3>
+
+
+	<form class="form-horizontal" name="loginForm">
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="nameID">FirstName:</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" name="name" id="nameID"
+					placeholder="Enter Name" ng-model="uname" />
+			</div>
+
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-success" ng-click="login()">Submit</button>
+
+			</div>
+		</div>
+
+	</form>
+
+</div>
