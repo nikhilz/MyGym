@@ -28,6 +28,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 //@RequestMapping("/user")
 public class GymController {
 	//ObjectMapper mapper = new ObjectMapper();
+	@Autowired
+	GymBean gymBean;
 	@Autowired 
 	gymservice service;
 	boolean res;
@@ -48,7 +50,7 @@ public class GymController {
 		 Object obj=JSONValue.parse(payload);  
 		 JSONObject jsonObject = (JSONObject) obj;  
 		  String name = (String) jsonObject.get("name");  
-
+		  
 
 		mav.addObject("uname", name);
 		mav.addObject("Status", "200");
@@ -63,9 +65,12 @@ public class GymController {
 		System.out.println("--------------inside---enquiryForm---------"+payload);
 		 Object obj=JSONValue.parse(payload);  
 		 JSONObject jsonObject = (JSONObject) obj;  
-		  String name = (String) jsonObject.get("name");  
-		  Long mobile = (Long) jsonObject.get("mobile");
-
+		  String name = jsonObject.get("name")+"";  
+		  String mobile =jsonObject.get("mobile")+"";
+		  gymBean.setMobile(mobile);
+		  gymBean.setUsername(name);
+		  service.addenquiry(gymBean);
+		  
 		  System.out.println("name--"+name+"--mobile--"+mobile);
 		return new ModelAndView("enquiry").addObject("resp","successful");
 		

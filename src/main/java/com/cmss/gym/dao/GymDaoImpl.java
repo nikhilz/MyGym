@@ -33,7 +33,7 @@ public class GymDaoImpl implements gymdao
 
 		System.out.println("------dao-----------");
 		//currentSession.saveOrUpdate(bean); 
-		currentSession.saveOrUpdate(bean);
+		currentSession.save(bean);
 		return true;
 		} catch (Exception e) {
 			//System.out.println(" "+e);

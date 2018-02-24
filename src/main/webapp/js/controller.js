@@ -96,7 +96,7 @@ app.controller("AppController", function($rootScope,$scope,$http,$location) {
 		
 		$http({
 			method : 'POST',
-			url: "http://localhost:8084/MyGym/enquiryForm.json",
+			url: "http://localhost:8080/MyGym/enquiryForm.json",
 			data: data,
 			headers : {
               'Accept': 'text/plain'

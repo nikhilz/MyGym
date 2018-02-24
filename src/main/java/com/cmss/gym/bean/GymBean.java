@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+@Component
 @Entity
 @Table(name = "ENQUIRY_TBL")
 public class GymBean {
@@ -37,5 +39,9 @@ public String getMobile() {
 }
 public void setMobile(String mobile) {
 	this.mobile = mobile;
+}
+@Override
+public String toString() {
+	return "GymBean [id=" + id + ", username=" + username + ", mobile=" + mobile + "]";
 }
 }
